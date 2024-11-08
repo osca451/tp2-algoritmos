@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Paciente
+comment0.text=\n\ Clase\ que\ representa\ un\ paciente\ que\ ingresa\ a\ la\ Sala\ de\ Emergencia\n
+comment1.params=nombre\ apellido\ diagnostico
+comment1.target=Paciente(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=
+comment3.target=java.util.List\ leerPacientes()
+comment3.text=\n\ Lee\ los\ pacientes\ almacenados\ en\ el\ archivo\ "pacientes.txt"\n\ \n\ @return\ Lista\ de\ pacientes\ por\ orden\ de\ llegada.\n
+comment4.params=
+comment4.target=int\ clasificacionEmergencia()
+comment4.text=\n\ Devuelve\ un\ n\u00FAmero\ representando\ la\ Clasificaci\u00F3n\ de\ Emergencia\ del\ paciente\n\ a\ partir\ de\ su\n\ diagn\u00F3stico.\n\ N\u00FAmero\ del\ 1\ al\ 5\ donde\:\n\ -\ 1\ es\ Emergencia\ (Rojo)\n\ -\ 2\ es\ Urgencia\ (Naranja)\n\ -\ ...\n\ -\ 5\ es\ No\ Urgente\ (Azul)\n\ \n\ @return\ Clasificaci\u00F3n\ de\ emergencia\n
+numComments=5

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ColaPrioridadArray
+comment1.params=
+comment1.target=ColaPrioridadArray()
+comment2.params=elem\ prioridad
+comment2.target=void\ insertar(java.lang.Object,\ int)
+comment3.params=
+comment3.target=java.lang.Object\ eliminar()
+comment4.params=
+comment4.target=java.lang.Object\ observar()
+comment5.params=
+comment5.target=boolean\ estaVacia()
+comment6.params=
+comment6.target=int\ tamanio()
+numComments=7
