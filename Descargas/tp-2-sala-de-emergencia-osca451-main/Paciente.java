@@ -59,8 +59,7 @@ public class Paciente {
      * @return Clasificación de emergencia
      */
     public int clasificacionEmergencia() {
-        char letra = diagnostico.toLowerCase().charAt(0);
-        System.out.println("letra: "+letra+" diagnostico: "+diagnostico);
+      char letra = diagnostico.toLowerCase().charAt(0);
         if(letra == 'r')
         {
             return 1;
@@ -69,9 +68,9 @@ public class Paciente {
         {
             return 2;
         }
-        else if(letra == 'a')
+        else if(diagnostico.toLowerCase().equals("azul"))
         {
-            return 3;
+            return 5;
         }
         else if(letra == 'v')
         {
@@ -79,12 +78,12 @@ public class Paciente {
         }
         else if(letra == 'a')
         {
-            return 5;
+            return 3;
         }
         else
         {
             throw new IllegalArgumentException("error.");
-        }
+        }  
     }
 
 }
