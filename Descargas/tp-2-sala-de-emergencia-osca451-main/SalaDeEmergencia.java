@@ -11,16 +11,19 @@ public class SalaDeEmergencia {
      */
     public static Paciente calcularAtencionN(int n) {
     List<Paciente> pacientesPorLlegada = Paciente.leerPacientes();
-    ColaPrioridad<Paciente> cola = new ColaPrioridadArray<>();
-    for (Paciente paciente : pacientesPorLlegada) {
-        int prioridad = paciente.clasificacionEmergencia();
-        cola.insertar(paciente, prioridad); 
-    }
-    Paciente paciente = null;
-    for (int i = 1; i <= n && !cola.estaVacia(); i++) {
-        paciente = cola.eliminar();
-    }
-    return paciente;
+        ColaPrioridad<Paciente> cola = new ColaPrioridadArray<>();
+        for (Paciente paciente : pacientesPorLlegada) {
+            int prioridad = paciente.clasificacionEmergencia();
+            cola.insertar(paciente, prioridad);
+        }
+        if (n > cola.tamanio()) {
+            return null;
+        }
+        Paciente paciente = null;
+        for (int i = 1; i <= n && !cola.estaVacia(); i++) {
+            paciente = cola.eliminar();
+        }
+        return paciente;
 }
 
 
