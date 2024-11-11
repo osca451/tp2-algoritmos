@@ -24,18 +24,14 @@ public void insertar(T elem, int prioridad) {
     Elemento<T> nuevoElemento = new Elemento<>(elem, prioridad);
     if (estaVacia()) {
         lista.add(0, nuevoElemento);
-    } else {
-        if (prioridad == 5) {
-            lista.add(0, nuevoElemento);
-        } else {
-            int i = 0;
-            while (i < lista.size() && ((Elemento<T>) 
-            lista.get(i)).prioridad <= prioridad) {
-                i++;
-            }
-            lista.add(i, nuevoElemento);
-        }
+    } 
+    else {
+    int i = 0;
+    while (i < lista.size() && lista.get(i).prioridad <= prioridad) {
+    i++;
     }
+    lista.add(i, nuevoElemento);
+  }
 }
 
 @Override
@@ -61,9 +57,7 @@ public T observar() {
     }
     else
     {
-        T[] arreglo = (T[]) new Object[1];
-        arreglo[0] = (T) lista.get(0);
-        return arreglo[0];  
+        return lista.get(0).elem; 
     } 
 }
 
